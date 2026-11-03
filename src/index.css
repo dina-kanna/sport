@@ -1,0 +1,155 @@
+
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, Arial, sans-serif;
+  color: #17251f;
+  background: #f5f6f0;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  scrollbar-width: none;
+}
+
+* {
+  box-sizing: border-box;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Text selection */
+::selection {
+  background: #c7f36b;
+  color: #17251f;
+}
+
+/* Main container */
+.container-custom {
+  width: min(1160px, calc(100% - 40px));
+  margin-inline: auto;
+}
+
+/* Section spacing */
+.section-padding {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+/* Section heading */
+.section-title {
+  font-size: clamp(36px, 5vw, 58px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+/* Primary button */
+.primary-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 22px;
+  border-radius: 999px;
+  background: #c7f36b;
+  color: #17251f;
+  font-size: 12px;
+  font-weight: 900;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+  background: #b4e650;
+}
+
+/* Dark button */
+.dark-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 13px 22px;
+  border-radius: 999px;
+  background: #17251f;
+  color: white;
+  font-size: 12px;
+  font-weight: 900;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.dark-button:hover {
+  background: #314a3b;
+  transform: translateY(-2px);
+}
+
+/* Form controls */
+.form-control {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #cbd2c3;
+  border-radius: 9px;
+  background: white;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: #759d3c;
+  box-shadow: 0 0 0 3px #759d3c25;
+}
+
+/* Responsive spacing */
+@media (max-width: 640px) {
+  .container-custom {
+    width: min(100% - 32px, 560px);
+  }
+
+  .section-padding {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  html,
+  :root {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
